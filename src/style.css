@@ -1,0 +1,50 @@
+﻿:root { font-family: 'Segoe UI', 'Malgun Gothic', sans-serif; color: #494c45; background: #f8f3ed; line-height: 1.6; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(ellipse at 8% 15%, #e7eddf, transparent 45%), radial-gradient(ellipse at 95% 40%, #f6e1d8, transparent 45%); }
+main { max-width: 890px; margin: auto; padding: 30px 24px; }
+header, .chat-header, .status-row, .compose-footer, footer { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+header a { color: #526b56; font-size: 27px; font-weight: 750; text-decoration: none; }
+header span, small { font-size: 11px; color: #74796a; }
+.intro { text-align: center; padding: 48px 0 28px; }
+.intro small { letter-spacing: 2px; }
+.radio-dial { display: flex; align-items: center; justify-content: center; gap: 15px; max-width: 380px; margin: 25px auto 0; padding: 12px 20px; border: 1px solid #dfd8c8; border-radius: 12px; background: #f5eddf; color: #887557; font-size: 10px; letter-spacing: 2px; }
+.radio-dial i { flex: 1; height: 15px; background: repeating-linear-gradient(90deg, #bbad91 0 1px, transparent 1px 7px); }
+h1 { font-size: clamp(30px, 4vw, 42px); font-weight: 600; letter-spacing: -2px; line-height: 1.45; margin: 15px 0; }
+.intro p { font-size: 14px; color: #74776c; }
+.chat { background: #fffdf9; border: 1px solid #e2e3d7; border-radius: 24px; overflow: hidden; box-shadow: 0 16px 55px #6e635210; }
+.chat-header { padding: 22px 26px; }
+h2 { font-size: 17px; margin: 0 0 3px; }
+button, textarea { font: inherit; }
+button { cursor: pointer; border: 0; border-radius: 12px; padding: 12px 18px; background: #526b56; color: white; font-size: 12px; font-weight: 600; }
+button:hover { background: #415a45; }
+button:disabled { cursor: wait; opacity: .55; }
+.secondary { background: #f1eee7; color: #66695f; padding: 9px 12px; }
+.secondary:hover { background: #e8e4da; }
+:focus-visible { outline: 3px solid #a67954; outline-offset: 3px; }
+[hidden] { display: none !important; }
+.status-row { border-block: 1px solid #efeee7; padding: 10px 26px; background: #faf9f4; }
+#status { font-size: 11px; background: #eee9dd; color: #726446; border-radius: 20px; padding: 3px 10px; }
+#status::before { content: '●'; font-size: 8px; margin-right: 6px; }
+#status[data-state='success'] { background: #e2eddf; color: #426444; }
+#status[data-state='error'] { background: #f7e2db; color: #914a39; }
+.conversation { min-height: 260px; max-height: 480px; overflow-y: auto; padding: 24px 26px; }
+#empty { text-align: center; padding: 22px 0; }
+#empty > span { display: inline-grid; place-items: center; background: #fbefd9; color: #b68d48; border-radius: 50%; width: 54px; height: 54px; font-size: 29px; }
+h3 { font-size: 17px; margin: 12px 0 5px; }
+#empty p { font-size: 13px; color: #7e8077; }
+#messages { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 18px; }
+#messages li { max-width: 88%; border-radius: 17px; background: #f0eee7; padding: 13px 17px; align-self: flex-start; overflow-wrap: anywhere; }
+#messages .user { align-self: flex-end; background: #e4ebde; }
+#messages strong { font-size: 11px; color: #68735d; }
+#messages p { font-size: 14px; margin: 5px 0 0; white-space: pre-wrap; }
+#loading { color: #6f785f; font-size: 13px; }
+#notice { font-size: 12px; color: #7d654e; margin: 0; padding: 0 26px 14px; overflow-wrap: anywhere; }
+form { border-top: 1px solid #efeee7; padding: 18px 26px 22px; }
+label { display: block; font-size: 12px; margin-bottom: 8px; }
+textarea { width: 100%; resize: vertical; min-height: 90px; max-height: 240px; background: #fbfaf6; border: 1px solid #e3e3d8; border-radius: 12px; padding: 12px 14px; color: #464d40; font-size: 14px; }
+textarea::placeholder { color: #909286; }
+.compose-footer { margin-top: 10px; }
+aside { padding: 18px 22px; margin-top: 20px; border-radius: 15px; border: 1px solid #e7ddcb; background: #f5eddf99; font-size: 12px; color: #796b56; }
+aside p { margin: 4px 0 0; }
+footer { font-size: 11px; color: #828575; margin-top: 26px; }
+@media (max-width: 540px) { main { padding: 20px 14px; } header span { display: none; } .intro { padding-top: 36px; } .chat-header, .status-row, .conversation, form { padding-inline: 17px; } #notice { padding-inline: 17px; } .compose-footer, footer { flex-wrap: wrap; } .compose-footer button { margin-left: auto; } }

@@ -1,0 +1,18 @@
+﻿<!doctype html>
+<html lang="ko">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>온기 라디오 — 당신의 사연에 한 곡을</title></head>
+<body>
+<main>
+<header><a href="./">✳ 온기 라디오</a><span>당신의 사연에, 한 곡의 온기</span></header>
+<section class="intro"><small>STORIES & SONGS · ONGI RADIO</small><h1>당신의 이야기가<br>오늘의 선곡이 됩니다.</h1><p>유난히 길었던 하루도, 혼자 간직한 설렘도.<br>DJ 온기에게 들려주세요. 어울리는 노래를 골라드릴게요.</p><div class="radio-dial" aria-hidden="true"><span>88</span><i></i><span>온기 주파수</span><i></i><span>108</span></div></section>
+<section class="chat" aria-label="AI 챗봇">
+<div class="chat-header"><div><h2>♫ DJ 온기의 사연 부스</h2><small>사연을 듣고, 마음에 맞는 노래를 골라요</small></div><button id="reset" type="button" class="secondary">대화 초기화</button></div>
+<div class="status-row"><span id="status" role="status"></span><small>Responses API 실습</small></div>
+<div class="conversation"><div id="empty"><span aria-hidden="true">♫</span><h3>이곳은 온기 라디오입니다.</h3><p>오늘은 어떤 마음으로 찾아오셨나요?<br>좋아하는 음악 취향도 함께 알려주세요.</p></div><ol id="messages" aria-label="대화 내용" aria-live="polite" aria-busy="false"></ol><p id="loading" role="status" hidden>DJ 온기가 사연을 읽고 노래를 고르고 있어요…</p></div>
+<p id="notice" role="status"></p>
+<form id="chat-form"><label for="message">DJ 온기에게 보내는 사연</label><textarea id="message" rows="3" placeholder="오늘 퇴근길이 유난히 쓸쓸했어요. 잔잔한 한국 노래 한 곡 추천해 주실래요?" required></textarea><div class="compose-footer"><small>Enter로 전송 · Shift + Enter로 줄바꿈</small><button id="send">사연 보내기 ↗</button></div></form>
+</section>
+<aside><strong>로컬 교육용 실습</strong><p>브라우저 환경 변수는 API Key를 숨기지 못합니다. 실제 키가 포함된 빌드 결과물을 공개 배포하지 마세요.</p></aside>
+<footer>당신의 하루 끝에, 온기 라디오 <span>음악은 추천만 제공하며 재생하지 않아요.</span></footer>
+</main><script type="module" src="/src/main.js"></script>
+</body></html>
